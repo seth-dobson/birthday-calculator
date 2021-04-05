@@ -16,9 +16,9 @@ def bday_calc(month, day):
     bday1 = dt.date(today.year + 1, month, day)
     
     if today < bday0:
-        print('Your next birthday is' + ' ' + str((bday0 - today).days) + ' ' + 'days away.')
+        print(f'Your next birthday is {(bday0 - today).days} days away.')
     else:
-        print('Your next birthday is' + ' ' + str((bday1 - today).days) + ' ' + 'days away.')
+        print(f'Your next birthday is {(bday1 - today).days} days away.')
 
 # get user inputs        
 m = input('What month were you born? ')
