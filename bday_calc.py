@@ -20,13 +20,20 @@ def bday_calc(month, day):
     else:
         print(f'Your next birthday is {(bday1 - today).days} days away.')
 
-# get user inputs        
-m = input('What month were you born? ')
-d = input('What day were you born? ')
+# get user inputs
+while True:
+    try:
+        m = int(input('What month were you born? '))
+        break
+    except ValueError:
+        print('Oops! You did not enter a valid number. Please try again...')
 
-# convert string to integer
-m = int(m)
-d = int(d)
+while True:
+    try:
+        d = int(input('What day were you born? '))
+        break
+    except ValueError:
+        print('Oops! You did not enter a valid number. Please try again...')
 
 # call function
 bday_calc(m,d)
